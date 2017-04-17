@@ -1,0 +1,34 @@
+// Header
+header.text-center#header
+	.carousel.slide#carousel-example-generic(data-ride="carousel") 
+
+		// Wrapper
+		.carousel-inner(role="listbox")
+			.item.active
+				img(src="img/images/header.png" alt="header")
+				.carousel-caption
+					.text
+						h1 Welcome To 
+							span Amazing Template
+						p Mauris non sapien eget dolor ultricies auctor eget non est. Donec sed ligula ipsum. Aliquam dignissim hendrerit velit
+			.item
+				img(src="img/images/header1.png" alt="classic_13")
+				.carousel-caption
+					.text
+						h1 Welcome To 
+							span Classic
+						p Mauris non sapien eget dolor ultricies auctor eget non est. Donec sed ligula ipsum. Aliquam dignissim hendrerit velit
+			.item
+				img(src="img/images/header2.png" alt="classic_13")
+				.carousel-caption
+					.text
+						h1 Welcome To 
+							span Awesome
+						p Mauris non sapien eget dolor ultricies auctor eget non est. Donec sed ligula ipsum. Aliquam dignissim hendrerit velit
+	
+		// Controls
+		a.left.carousel-control(href="#carousel-example-generic" data-slide="prev")
+			span.glyphicon.glyphicon-chevron-left
+		a.right.carousel-control(href="#carousel-example-generic" data-slide="next")
+			span.glyphicon.glyphicon-chevron-right
+	a(data-scroll href="#about"): i.glyphicon.glyphicon-menu-down

@@ -1,0 +1,208 @@
+$mainColor : #1abc9c
+$textColor : #6C6C6C
+.underline:after
+	content: ""
+	height: 3px
+	width: 2em
+	position: absolute
+	background-color: #1abc9c
+	bottom: -10px
+	left: 0
+
+.relative
+	position: relative
+	margin-bottom: 1em
+
+%hover-effect
+	color: #FFF
+	background-color: $mainColor
+	border-color: $mainColor
+/* Start Nav */
+
+nav
+
+	left: 0
+	right: 0
+	z-index: 99999
+	background: transparent !important
+	border: 0 !important
+	&.absoulte
+		position: absolute !important
+	&.navbar-inverse .navbar-nav>li>a
+		color: #FFF
+	&.navbar-inverse .navbar-nav>.active>a, 
+	&.navbar-inverse .navbar-nav>.active>a:focus,
+	&.navbar-inverse .navbar-nav>.active>a:hover
+		color: $mainColor
+		background-color: transparent
+		border-bottom: 3px solid $mainColor
+	&.navbar-inverse .navbar-brand
+		color: #FFF
+
+.scrolled
+	background: rgba(0,0,0,0.5) !important
+
+/* End Nav */
+
+/* Start Header */
+
+header 
+	height: 75vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.carousel.slide,
+	.carousel-inner,
+	.item,
+	.item img 
+		width: 100% !important
+		height: 100% !important
+	.carousel-caption
+		bottom: 35%
+		span 
+			color: $mainColor
+	.glyphicon.glyphicon-menu-down
+		position: relative
+		top: -24px
+		color: $mainColor
+		cursor: pointer
+		font-size: 24px
+		transition: all 1s ease-in-out
+		animation: gotodown 1s ease-in-out infinite alternate
+
+@keyframes gotodown
+	0%
+		top: -50px
+	100%
+		top: -24px
+/* End Header */
+
+/* Start About */
+#about 
+	margin-top: 60px
+	padding: 10px 0
+	h2
+		@extend .relative
+		margin-top: 0
+	article
+		margin: 40px 0px 30px
+	p 
+		color: #777777
+	.service
+		margin: 30px 0
+		.icon 
+			margin-top: 1em
+			color: $mainColor
+		.text 
+			width: calc(100% - 5em)
+	.team img
+		margin-bottom: 30px
+@media (max-width: 767px)
+	#about .service
+		.icon,.text 
+			float: none !important
+			text-align: center
+			width: 100%
+
+/* Start Testimonials */
+
+#testimonials
+	
+	background: url("../img/images/testi2.jpg") fixed
+	background-size: cover
+	h2 
+		@extend .relative
+		&.underline:after
+			display: block
+			margin: 0 auto
+			width: 120px
+			position: relative
+	.wrapper
+		background-color: rgba(0,0,0,0.7)
+		min-height: 50vh
+		color: #F1f1f1
+		display: flex
+		justify-content: center
+		flex-direction: column
+		.slider:not(.active)
+			display: none
+		p 
+			margin-top: 40px
+			font-size: 1.2em
+		.color 
+			color: $mainColor
+			font-weight: bold
+
+/* End Testimonials */
+
+/* Start Portfolio */
+
+#portfolio
+	margin: 50px 0
+	h2 
+		@extend .relative
+	.shuffels > .shuffel
+		transition: .5s all ease-in-out
+		cursor: pointer
+		display: inline-block
+		margin: 0 5px 10px
+		padding: 7px 20px
+		color: $textColor
+		border: 1px solid $textColor
+		&.selected
+			@extend %hover-effect
+		&:hover 
+			@extend %hover-effect
+		&:first-child
+			margin-left: 0
+		span
+			font-size: 19px
+	img 
+		margin-top: 15px
+		margin-bottom: 15px
+		position: relative
+
+/* End Portfolio */
+
+/* Start Footer */
+
+footer 
+	padding: 50px 0
+	margin-top: 50px
+	background-color: #232323
+	color: $textColor
+	.social-media
+		margin-top: 50px
+		i 
+			cursor: pointer
+			border: 1px solid $textColor
+			padding: 5px
+			margin-right: 10px
+			transition: .5s all ease-in-out
+			&:hover 
+				@extend %hover-effect
+	.tags li 
+		border: 1px solid $textColor
+		display: inline-block
+		padding: 7px 10px
+		margin-right: 7px
+		margin-bottom: 10px
+		transition: .5s all ease-in-out
+		cursor: pointer
+		&:hover
+			@extend %hover-effect
+	h3
+		color: #FFF
+	h4 
+		color: #CCC
+@media (max-width: 767px)
+	.shuffels > .shuffel
+		display: block
+		width: 100%
+		margin-left: 0 !important
+		padding: 0
+	footer 
+		text-align: center
+		.media-body
+			text-align: left
+/* End Footer */

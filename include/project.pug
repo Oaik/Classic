@@ -1,0 +1,36 @@
+article#portfolio
+	.container
+		h2.underline Projects
+		// Shuffels
+		.shuffels
+			.shuffel.selected.all(data-shuffle=".all")
+				span All
+			.shuffel.mobile(data-shuffle=".mobile")
+				span Mobile
+			.shuffel.web(data-shuffle=".web")
+				span Web
+			.shuffel.fashion(data-shuffle=".fashion")
+				span Fashion
+			.shuffel.video(data-shuffle=".video")
+				span Video
+		// Images (show-case)
+		.images-placeholder
+			.row 
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/1.png").all.mobile
+
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/2.png").all.web
+					
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/3.png").all.mobile
+					
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/4.png").all.web
+					
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/5.png").all.fashion
+					
+				.col-md-4.col-sm-6
+					img.center-block.img-responsive(src="img/images/portoflio/1.png").all.video
+					

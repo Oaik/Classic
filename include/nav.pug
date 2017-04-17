@@ -1,0 +1,17 @@
+// Navbar
+nav.navbar.navbar-inverse.absoulte
+	.container
+		.navbar-header
+			button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#nav1" aria-expanded="false" type="button")
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.text-uppercase.navbar-brand(href="#") Classic
+		// Collapse Navbar items
+		.collapse.navbar-collapse#nav1
+			ul.nav.navbar-nav.navbar-right.text-center
+				li.text-uppercase.active: a(data-scroll href="#header") Home
+				li.text-uppercase: a(data-scroll href="#about") About
+				li.text-uppercase: a(data-scroll href="#testimonials") Testimonials	
+				li.text-uppercase: a(data-scroll href="#portfolio") Portfolio
+				li.text-uppercase: a(data-scroll href="#contact") Contact
